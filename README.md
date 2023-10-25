@@ -18,7 +18,7 @@ Clone down this repository. You will need `node` and `npm` installed globally on
 3. Install [VS Code](https://code.visualstudio.com/download)
 4. Clone the Repository
 
- 'git clone https://github.com/uclaradio/NativeRadio.git'
+ `git clone https://github.com/uclaradio/NativeRadio.git`
 
 ## In the Terminal
 Installation:
