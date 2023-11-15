@@ -39,8 +39,8 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   logo: {
-    width: 200, // Set the width of your logo
-    height: 200, // Set the height of your logo
-    resizeMode: 'contain', // This will ensure that your image is resized in a way that maintains the aspect ratio
+    width: 200,
+    height: 200, 
+    resizeMode: 'contain', 
   },
 });
