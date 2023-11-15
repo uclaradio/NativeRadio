@@ -1,49 +1,27 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, Image, View, Animated } from 'react-native';
-import React, {useRef, useEffect} from 'react';
-
-//Logo Animation 
-const Fade = props => {
-  const fadeAnim = useRef(new Animated.Value(0)).current;
-
-  useEffect(() => {
-    Animated.sequence([
-      Animated.timing(fadeAnim, {
-        toValue: 1,
-        duration: 2500,
-        useNativeDriver: true,
-      }), //.start(); //,
-    Animated.timing(fadeAnim, {
-        toValue: 0,
-        duration: 2500,
-        useNativeDriver: true,
-      })
-    ]).start();
-  }, [fadeAnim]);
-
-    return (
-      <Animated.View 
-        style={{
-          ...props.style,
-          opacity: fadeAnim, 
-        }}>
-        {props.children}
-      </Animated.View>
-    );
-};
+import React, {useRef, useEffect, useState} from 'react';
+import FadeScreen from './src/screens/FadeScreen';
+import HomeScreen from './src/screens/HomeScreen';
 
 //streamURL will hold the Radio Stream link and we can reference this later...
 const streamUrl = 'https://securestreams4.autopo.st:1643/';
 
+
 export default function App() {
+  const [loading, setloading] = useState(true); 
+  useEffect(() => {
+    var delayInMilliseconds = 5000; //1 second
+
+  setTimeout(function() {
+    //your code to be executed after 1 second
+    setloading(false);
+  }, delayInMilliseconds);
+  }, [])
+
   return (
     <View style={styles.container} >
-      <Fade 
-        style={styles.topHalf}>
-        <Image source={require('./assets/Logo.png')} style={styles.logo} />
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Ucla Radio Dev Baddddiees hard at work </Text>
-      </Fade>
+        {loading ? (<FadeScreen/>):(<HomeScreen/>)}
     </View>
   );
 }
