@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, Image, View, Animated } from 'react-native';
 import React, {useRef, useEffect, useState} from 'react';
 import FadeScreen from './src/screens/FadeScreen';
+import AboutUsScreen from './src/screens/AboutUs';
 import HomeScreen from './src/screens/HomeScreen';
 
 //streamURL will hold the Radio Stream link and we can reference this later...
@@ -21,10 +22,11 @@ export default function App() {
 
   return (
     <View style={styles.container} >
-        {loading ? (<FadeScreen/>):(<HomeScreen/>)}
+        {loading ? (<FadeScreen/>):(<AboutUsScreen/>)}
     </View>
   );
 }
+//On line 25 switch AboutUsScreen to HomeScreen and add button (dropdown) to navigate to AboutUsScreen
 
 const styles = StyleSheet.create({
   container: {
