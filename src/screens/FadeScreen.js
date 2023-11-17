@@ -7,7 +7,7 @@ const FadeScreen = (props) => {
         <View>
             <Fade 
             style={styles.topHalf}>
-            <Image source={require('../../assets/Logo.png')} style={styles.logo} />
+            <Image source={require('../../assets/record.png')} style={styles.logo}/>
             </Fade>
         </View>
     );
@@ -15,14 +15,15 @@ const FadeScreen = (props) => {
 
 const styles = StyleSheet.create({
     topHalf: {
+      marginTop: "25%",
       flex: 0.5,
       justifyContent: 'center',
       alignItems: 'center',
       width: '100%',
     },
     logo: {
-      width: 200,
-      height: 200, 
+      width: 600,
+      height: 600, 
       resizeMode: 'contain', 
     },
   });
