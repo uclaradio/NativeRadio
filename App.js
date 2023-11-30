@@ -22,11 +22,11 @@ export default function App() {
 
   return (
     <View style={styles.container} >
-        {loading ? (<FadeScreen/>):(<AboutUsScreen/>)}
+        {loading ? (<FadeScreen/>):(<HomeScreen/>)}
     </View>
   );
 }
-//On line 25 switch AboutUsScreen to HomeScreen and add button (dropdown) to navigate to AboutUsScreen
+//On line 25 switch HomeScreen to AboutUsScreen or add button (dropdown) to navigate/view to AboutUsScreen
 
 const styles = StyleSheet.create({
   container: {
