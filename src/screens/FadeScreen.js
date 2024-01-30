@@ -1,10 +1,10 @@
 import React from "react";
 import { Image, Text, View, StyleSheet } from "react-native";
 import Fade from "../components/Fade";
-
+import { sharedStyles } from "../components/Styles";
 const FadeScreen = (props) => {
     return (
-        <View>
+        <View style={sharedStyles.container}>
             <Fade 
             style={styles.topHalf}>
             <Image source={require('../../assets/record.png')} style={styles.logo}/>
