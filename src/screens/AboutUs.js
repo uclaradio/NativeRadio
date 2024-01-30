@@ -7,6 +7,7 @@ import FaYoutube from "@expo/vector-icons/FontAwesome";
 import FaTwitter from "@expo/vector-icons/FontAwesome";
 import FaTiktok from "@expo/vector-icons/FontAwesome5";
 
+import { sharedStyles } from "../components/Styles";
 /*
   -- DOCUMENTATION --
 */

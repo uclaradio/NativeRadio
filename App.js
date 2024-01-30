@@ -4,7 +4,9 @@ import React, {useRef, useEffect, useState} from 'react';
 import FadeScreen from './src/screens/FadeScreen';
 import AboutUsScreen from './src/screens/AboutUs';
 import HomeScreen from './src/screens/HomeScreen';
-
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { NavBarStack } from './src/navigation/NavigationBarStack';
+import { NavigationContainer } from '@react-navigation/native';
 //streamURL will hold the Radio Stream link and we can reference this later...
 const streamUrl = 'https://securestreams4.autopo.st:1643/';
 
@@ -21,9 +23,13 @@ export default function App() {
   }, [])
 
   return (
-    <View style={styles.container} >
-        {loading ? (<FadeScreen/>):(<HomeScreen/>)}
-    </View>
+    <NavigationContainer>
+      {loading ? (
+        <FadeScreen/>
+      ) : (
+        <NavBarStack />
+      )}
+    </NavigationContainer>
   );
 }
 //On line 25 switch HomeScreen to AboutUsScreen or add button (dropdown) to navigate/view to AboutUsScreen
