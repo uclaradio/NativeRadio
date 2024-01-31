@@ -15,10 +15,10 @@ export const homeStyle = StyleSheet.create({
        //justifyContent: 'center',
     },
     logo: {
-        width: screenWidth * 0.5, // 50% of screen width
-        height: screenWidth * 0.5, // Keep the aspect ratio
+        width: screenWidth * 0.5, 
+        height: screenWidth * 0.5, 
         resizeMode: 'contain',
-        marginTop: 10, // Add some space at the top
+        marginTop: 10,
 
     },
   });
