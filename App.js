@@ -33,5 +33,3 @@ export default function App() {
   );
 }
 //On line 25 switch HomeScreen to AboutUsScreen or add button (dropdown) to navigate/view to AboutUsScreen
-
-
