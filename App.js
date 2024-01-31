@@ -34,22 +34,4 @@ export default function App() {
 }
 //On line 25 switch HomeScreen to AboutUsScreen or add button (dropdown) to navigate/view to AboutUsScreen
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#f582dc',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  topHalf: {
-    flex: 0.5,
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: '100%',
-  },
-  logo: {
-    width: 200,
-    height: 200, 
-    resizeMode: 'contain', 
-  },
-});
+

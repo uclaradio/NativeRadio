@@ -49,6 +49,7 @@ const styles = StyleSheet.create({
       marginLeft: '95%',
     },
     container: {
+      backgroundColor: '#F3D0F1',
       flex: 1,
       padding: 20,
     },
