@@ -26,7 +26,7 @@ const AboutUsScreen = (props) => {
   
 return ( 
     <View style={styles.container}>
-        <Text style={styles.header}>Who We Are</Text>
+        <Text style={styles.header}>about us</Text>
         <Text style={styles.bio}>UCLA Radio is the official student-run radio station of UCLA. 
             We are non-commercial, listener-supported, and have been broadcasting high-quality, freeform programming since 1962. 
             While our primary focus is delivering original and diverse radio content, UCLA Radio members work on art, design, web development, 
@@ -34,11 +34,11 @@ return (
             motivated students from different majors and backgrounds to explore their creativity, build practical skills, and discover the LA music and art scene.
        </Text>
        <View style={styles.buttons}> 
-        <FaInstagram name ='instagram' onPress= {() =>openSocials(instaLink)}/>
-        <FaSpotify name ='spotify' onPress= {() =>openSocials(spotifyLink)}/>
-        <FaYoutube name ='youtube-play' onPress= {() =>openSocials(youtubeLink)}/>
-        <FaTwitter name ='twitter' onPress= {() =>openSocials(twitterLink)}/>
-        <FaTiktok name ='tiktok' onPress= {() =>openSocials(tiktokLink)}/>
+        <FaInstagram name ='instagram' style={styles.button} size={30} onPress= {() =>openSocials(instaLink)}/>
+        <FaSpotify name ='spotify' style={styles.button} size={30} onPress= {() =>openSocials(spotifyLink)}/>
+        <FaYoutube name ='youtube-play' style={styles.button} size={30} onPress= {() =>openSocials(youtubeLink)}/>
+        <FaTwitter name ='twitter' style={styles.button} size={30} onPress= {() =>openSocials(twitterLink)}/>
+        <FaTiktok name ='tiktok' style={styles.button} size={30} onPress= {() =>openSocials(tiktokLink)}/>
        </View>
     </View>
 
@@ -46,20 +46,27 @@ return (
 
 const styles = StyleSheet.create({
     buttons: {
-      marginLeft: '95%',
+      marginLeft: '93%',
+      size: 30,
+      position: 'sticky',
+    },
+    button: {
+      paddingBottom: '5%',
     },
     container: {
       backgroundColor: '#F3D0F1',
       flex: 1,
-      padding: 20,
+      padding: 5,
     },
     header: {
-      marginTop: '50%',
+      marginTop: '40%',
+      marginBottom:'5%',
       flex: .25,
       justifyContent: 'center',
       alignItems: 'center',
-      marginLeft: '25%',
+      marginLeft: '35%',
       fontSize: 30,
+      fontFamily: "BlockKie"
     },
     bio: {
       flex: 3,
@@ -68,6 +75,7 @@ const styles = StyleSheet.create({
       marginLeft: '15%',
       marginRight: '15%',
       lineHeight: 27,
+      fontFamily: "BlockKie",
     },
 });
 
