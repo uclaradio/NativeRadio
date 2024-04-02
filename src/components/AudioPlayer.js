@@ -117,7 +117,7 @@ const AudioPlayer = ({ play }) => {
         }
         try {
           const { sound: newSound } = await Audio.Sound.createAsync(
-            { uri: 'https://securestreams4.autopo.st:1643' },
+            { uri: 'https://live.uclaradio.com/listen/ucla_radio/radio.mp3' },
             { shouldPlay: true }
           );
           setSound(newSound);
